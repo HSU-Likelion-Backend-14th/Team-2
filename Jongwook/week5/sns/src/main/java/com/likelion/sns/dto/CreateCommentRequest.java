@@ -7,4 +7,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CreateCommentRequest {
     private String content;
+    private Integer authorId;
 }

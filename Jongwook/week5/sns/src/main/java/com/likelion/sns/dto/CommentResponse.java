@@ -12,6 +12,17 @@ public class CommentResponse {
     private final AuthorResponse author;
     private final LocalDateTime createdAt;
 
+    @Getter
+    public static class AuthorResponse {
+        private final Integer userId;
+        private final String nickname;
+
+        public AuthorResponse(Integer userId, String nickname) {
+            this.userId = userId;
+            this.nickname = nickname;
+        }
+    }
+
     public CommentResponse(Comment comment) {
         this.commentId = comment.getCommentId();
         this.postId = comment.getPost().getPostId();
