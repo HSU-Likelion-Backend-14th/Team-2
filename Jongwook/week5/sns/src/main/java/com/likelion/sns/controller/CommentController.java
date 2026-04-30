@@ -21,12 +21,12 @@ public class CommentController {
 
     @GetMapping("/posts/{postId}/comments")
     public ResponseEntity<List<CommentResponse>> getComments(@PathVariable Integer postId) {
-        return ResponseEntity.ok(commentService.getCommentsByPostId(postId));
+        return ResponseEntity.ok(commentService.getComments(postId));
     }
 
     @GetMapping("/comments/{commentId}")
     public ResponseEntity<CommentResponse> getComment(@PathVariable Integer commentId) {
-        return ResponseEntity.ok(commentService.getComment(commentId));
+        return ResponseEntity.ok(commentService.getCommentDetail(commentId));
     }
 
     @PostMapping("/posts/{postId}/comments")
