@@ -2,6 +2,7 @@ package com.likelion.demo.domain.user.web.controller;
 
 import com.likelion.demo.domain.user.entity.User;
 import com.likelion.demo.domain.user.service.UserService;
+import com.likelion.demo.domain.user.web.dto.UserSaveReq;
 import com.likelion.demo.global.response.SuccessResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
