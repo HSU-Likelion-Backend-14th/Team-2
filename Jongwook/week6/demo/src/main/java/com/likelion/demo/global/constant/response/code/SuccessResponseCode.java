@@ -1,4 +1,20 @@
 package com.likelion.demo.global.constant.response.code;
 
-public class SuccessResponseCode {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+import static com.likelion.demo.global.constant.StaticValue.CREATED;
+import static javax.security.auth.callback.ConfirmationCallback.OK;
+
+@Getter
+@AllArgsConstructor
+public enum SuccessResponseCode implements BaseResponseCode {
+    SUCCESS_OK("GLOBAL_200", OK, "호출에 성공하였습니다."),
+    SUCCESS_CREATED("GLOBAL_201", CREATED, "생성에 성공하였습니다.");
+
+
+    private String code;
+    private int httpStatus;
+    private String message;
+
 }
